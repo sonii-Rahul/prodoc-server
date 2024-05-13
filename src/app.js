@@ -6,7 +6,7 @@ import session from "express-session"
 const app = express();
 
 app.use(cors({
-    origin: '*',
+    origin: 'https://prodoc.onrender.com',
     credentials: true
 }));
 app.use(express.json({
