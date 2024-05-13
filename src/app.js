@@ -4,7 +4,6 @@ import cookieParser from "cookie-parser";
 import session from "express-session"
 
 const app = express();
-app.enable('trust proxy')
 
 app.use(cors({
     origin: 'https://prodoc.onrender.com',
@@ -25,7 +24,6 @@ app.use(cookieParser());
 app.use(session({
     secret:process.env.secret,
     resave: false,
-    name: 'MyCoolWebAppCookieName',
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 * 24 }
 }))
