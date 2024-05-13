@@ -28,7 +28,8 @@ app.use(session({
     cookie: { 
         maxAge: 1000 * 60 * 60 * 24 ,
         sameSite: 'lax',
-        secure: true
+        secure: true,
+        domain: 'https://prodoc-server.onrender.com'
     }
 }))
 
